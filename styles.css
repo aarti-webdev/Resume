@@ -1,0 +1,48 @@
+:root{
+  --bg: #0f1724;
+  --card: #0f2133;
+  --accent: #ff7a59;
+  --accent-2: #6be3c4;
+  --muted: #b9c6d9;
+  --glass: rgba(255,255,255,0.03);
+  --radius: 12px;
+  --max-width: 1000px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background: linear-gradient(180deg, var(--bg) 0%, #071126 100%);
+  color: #eaf2fb;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+}
+.container{max-width: var(--max-width);margin:0 auto;padding:28px;}
+.site-header{position:sticky;top:0;z-index:50;backdrop-filter:blur(6px);background:linear-gradient(0deg,rgba(5,10,20,0.55),rgba(5,10,20,0.35));border-bottom:1px solid rgba(255,255,255,0.03)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand .name{margin:0;font-size:20px;letter-spacing:0.4px}
+.tagline{margin:2px 0 0 0;color:var(--muted);font-size:13px}
+.nav a{color:var(--muted);text-decoration:none;margin-left:16px;font-weight:600;font-size:14px}
+.nav a:hover{color:var(--accent-2)}
+.hero{padding:64px 0;background:radial-gradient(600px 150px at 10% 10%,rgba(107,227,196,0.06),transparent 6%),radial-gradient(600px 200px at 90% 90%,rgba(255,122,89,0.04),transparent 6%)}
+.hero h2{margin:0 0 12px 0;font-size:36px;color:#fff}
+.lead{color:var(--muted);font-size:16px;max-width:720px;margin-bottom:18px}
+.btn{display:inline-block;padding:10px 16px;border-radius:10px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#072028;font-weight:700;text-decoration:none;margin-right:8px}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);font-weight:600}
+.about,.education,.projects,.contact{margin-top:28px;padding:22px;background:linear-gradient(180deg,rgba(255,255,255,0.01),rgba(255,255,255,0.00));border-radius:var(--radius);border:1px solid rgba(255,255,255,0.03)}
+h3{margin:0 0 12px 0;font-size:20px}
+.edu-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
+.edu-list li{background:var(--glass);padding:12px;border-radius:10px;display:flex;align-items:center;justify-content:space-between}
+.edu-meta{color:var(--muted);font-weight:500;font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(1,1fr);gap:12px}
+.card{background:linear-gradient(180deg,rgba(255,255,255,0.015),rgba(255,255,255,0.01));padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
+.card h4{margin:0 0 6px 0}
+.card p{margin:0 0 8px 0;color:var(--muted);font-size:14px}
+.tag{display:inline-block;font-size:12px;padding:6px 8px;border-radius:999px;background:rgba(107,227,196,0.08);color:var(--accent-2);font-weight:700}
+.contact .phone a{color:var(--accent-2);font-weight:700;text-decoration:none;font-size:18px}
+.note{color:var(--muted);font-size:13px;margin-top:8px}
+.site-footer{margin-top:28px;padding:18px 0;color:var(--muted);border-top:1px solid rgba(255,255,255,0.02);text-align:center;font-size:13px}
+.small{opacity:0.7;font-size:12px;margin-top:6px}
+@media(min-width:720px){.grid{grid-template-columns:repeat(3,1fr)}.header-inner{padding:10px 0}}
